@@ -40,3 +40,130 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title Goes Here"], ["description", "Desc goes here..."], ["created_at", "2019-11-22 17:42:23.016701"], ["updated_at", "2019-11-22 17:42:23.016701"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/posts/new" for ::1 at 2019-11-22 12:45:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 542ms (Views: 526.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-22 12:46:12 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lKn3RVDNvOJHnMBQfyVc5Asnz5fV5E7vw+SiTE9+EXd2ZmqZEjCYrwlRisCW7qFoxCOtD9zBvt1br7upEWJLRw==", "title"=>"Curacao's Tourism Industry", "description"=>"It's very touristy.", "commit"=>"Submit Post"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `newp' for #<Class:0x00007fb2385a57e8>
+Did you mean?  new):
+  
+app/controllers/posts_controller.rb:16:in `create'
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.7ms)
+Started GET "/posts/new" for ::1 at 2019-11-22 12:46:43 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 20.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-22 12:46:53 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"731SiZvc0OKX+qSa/fbJFKDhZbgdObPF3Xv2RW45oi8Nss9V2SH0r9k37goUPTSYb+UHIBQcQ/dFMO+gMCX4Hw==", "title"=>"Curacao's Tourism Industry", "description"=>"It's very touristy.", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Curacao's Tourism Industry"], ["description", "It's very touristy."], ["created_at", "2019-11-22 17:46:53.844604"], ["updated_at", "2019-11-22 17:46:53.844604"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-22 12:48:09 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 17.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-22 12:48:15 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BYbgf+PM3VQfQDtuGVqaxLD3M+3XnpleuKB62U6m1ajnSX2joTH5GVGNcf7wkWdIf/NRdd67aWwg62M8ELqPmA==", "title"=>"Curacao's Tourism Industry", "description"=>"It's still touristy.", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Curacao's Tourism Industry"], ["description", "It's still touristy."], ["created_at", "2019-11-22 17:48:15.632383"], ["updated_at", "2019-11-22 17:48:15.632383"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 9.2ms)
+
+
+  
+NameError (undefined local variable or method `posts' for #<PostsController:0x00007fb237d23160>
+Did you mean?  post):
+  
+app/controllers/posts_controller.rb:20:in `create'
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mattbechtel/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+Started GET "/posts/new" for ::1 at 2019-11-22 12:48:29 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 17.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-22 12:48:38 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUfD6bZRemzc1xqT0AumYxzqOeAK4RGunOwfwi8BiPqfiF419KxeIZIaUAM5wFvv0+5beAPE4ZwEpwYncR3Syg==", "title"=>"Curacao's Tourism Industry", "description"=>"Still touristy.", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Curacao's Tourism Industry"], ["description", "Still touristy."], ["created_at", "2019-11-22 17:48:38.840450"], ["updated_at", "2019-11-22 17:48:38.840450"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 15ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/posts" for ::1 at 2019-11-22 12:48:38 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-22 12:49:31 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 22.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-22 12:49:40 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DR/UFV9OcXiCFZR6xbkfeYAOxvzWLfFpglf+eHj0Tf3v0EnJHbNVNczY3uoscuL1TwqkZN8IAVsaHOedJugXzQ==", "title"=>"Curacao Uprising of 1970", "description"=>"Rise up!", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Curacao Uprising of 1970"], ["description", "Rise up!"], ["created_at", "2019-11-22 17:49:40.816939"], ["updated_at", "2019-11-22 17:49:40.816939"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/posts/6" for ::1 at 2019-11-22 12:49:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
